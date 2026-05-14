@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Calulator</title>
+</head>
+<body>
+  <div id="container">
+    <input id="display" readonly>
+    <div id="key">
+      <button class="operator" onclick="appendDisplay('+')">+</button>
+      <button onclick="appendDisplay('7')">7</button>
+      <button onclick="appendDisplay('8')">8</button>
+      <button onclick="appendDisplay('9')">9</button>
+      
+      <button class="operator" onclick="appendDisplay('-')">-</button>
+      <button onclick="appendDisplay('4')">4</button>
+      <button onclick="appendDisplay('5')">5</button>
+      <button onclick="appendDisplay('6')">6</button>
+      
+      <button class="operator" onclick="appendDisplay('*')">×</button>
+      <button onclick="appendDisplay('1')">1</button>
+      <button onclick="appendDisplay('2')">2</button>
+      <button onclick="appendDisplay('3')">3</button>
+      
+      <button class="operator" onclick="appendDisplay('/')">/</button>
+      <button onclick="appendDisplay('0')">0</button>
+      <button onclick="appendDisplay('.')">.</button>
+      <button class="equal" onclick="calcu()">=</button>
+      <button class="clear" onclick="delall()">C</button>
+    </div>
+  </div>
+</body>
+</html>
