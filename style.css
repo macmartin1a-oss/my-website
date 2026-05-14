@@ -1,0 +1,102 @@
+:root {
+      --primary: #ff6b35;
+      --primary-dark: #d85a2c;
+      --bg-dark: #1a1a2e;
+      --bg-card: #1a1a1a;
+      --text: #ffffff;
+      --accent: #00d4ff;
+      --radius: 16px;    
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0ff0 0%, var(--bg-dark) 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    #container {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 320px;
+      padding: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    #display {
+      width: 100%;
+      padding: 20px;
+      font-size: 2.5rem;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      text-align: right;
+      outline: none;
+      color: var(--text);
+      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      letter-spacing: 1px;
+    }
+
+    #display:focus {
+      border-color: var(--accent);
+      background: rgba(0, 212, 255, 0.08);
+    }
+
+    #key {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    button {
+      padding: 20px;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: var(--text);
+      background: rgba(255, 107, 53, 0.2);
+      border: 1px solid rgba(255, 107, 53, 0.3);
+      border-radius: 8px;
+    }
+
+    button:hover {
+      background: rgba(255, 107, 53, 0.35);
+      border-color: rgba(255, 107, 53, 0.6);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(255, 107, 53, 0.2);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    button.operator {
+      color: var(--accent);
+    }
+
+    button.equal {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      grid-column: span 2;
+    }
+
+    button.clear {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: white;
+      grid-column: span 2;
+    }
